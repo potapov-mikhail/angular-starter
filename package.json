@@ -8,8 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
-    "format": "prettier --write \"./src/**/*.{ts,html,scss,json}\"",
-    "format:ci": "prettier --list-different \"./src/**/*.{ts,html,scss,json}\"",
+    "format": "prettier --write \"./src/**/*.{ts,html,scss,json}\" --config .prettierrc",
+    "format:ci": "prettier --list-different \"./src/**/*.{ts,html,scss,json}\" --config .prettierrc",
     "stylelint:ci": "stylelint \"src/**/*.scss\""
   },
   "prettier": {
