@@ -4,13 +4,14 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
     "format": "prettier --write \"./src/**/*.{ts,html,scss,json}\" --config .prettierrc",
     "format:ci": "prettier --list-different \"./src/**/*.{ts,html,scss,json}\" --config .prettierrc",
-    "stylelint:ci": "stylelint \"src/**/*.scss\""
+    "stylelint:ci": "stylelint \"src/**/*.scss\"",
+    "bundle-analyze": "ng build --stats-json && esbuild-visualizer --metadata ./dist/angular-starter/stats.json"
   },
   "prettier": {
     "overrides": [
@@ -40,6 +41,7 @@
     "@angular/compiler-cli": "^20.0.0",
     "@types/jasmine": "~5.1.0",
     "angular-eslint": "20.1.1",
+    "esbuild-visualizer": "^0.7.0",
     "eslint": "^9.29.0",
     "jasmine-core": "~5.7.0",
     "karma": "~6.4.0",
