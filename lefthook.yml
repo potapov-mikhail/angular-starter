@@ -1,0 +1,11 @@
+pre-commit:
+  parallel: true
+  jobs:
+    - name: lefthook-format
+      run: npm run format:ci
+
+    - name: lefthook-stylelint
+      run: npm run stylelint:ci
+
+    - name: lefthook-eslint
+      run: npm run lint
